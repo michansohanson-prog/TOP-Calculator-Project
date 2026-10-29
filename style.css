@@ -40,14 +40,14 @@ header {
 
 #calc {
 	display: flex;
-	padding: 40px;
+	padding: 30px 10px 10px 10px;
 }
 
 #nums {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
-	width: 200px;
+	width: 260px;
 }
 
 #nums h1 {
@@ -56,6 +56,10 @@ header {
 	flex: 1;
 	max-width: 50px;
 	box-shadow: 4px 4px 2px black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
 }
 
 #funcs {
@@ -76,9 +80,10 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: -20px;
+	margin: -20px 0;
 	width: 100%;
 	box-shadow: 4px 4px 2px black;
+	border-radius: 8px;
 }
 
 #funcs h1 {
@@ -92,4 +97,5 @@ header {
 	margin-bottom: -20px;
 	width: 100%;
 	box-shadow: 4px 4px 2px black;
+	border-radius: 8px;
 }
