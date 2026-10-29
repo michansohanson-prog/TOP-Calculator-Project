@@ -15,6 +15,7 @@ let num1 = "0";
 let num2 = "num2Empty";
 let op = "opEmpty";
 let display = document.querySelector("#display");
+let calculated;
 getData();
 
 function getData() {
@@ -59,12 +60,19 @@ one.addEventListener("click", (e) => {
 			num1 = "1";
 			display.textContent = "1";
 		} else {
-			num1 += "1";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "1";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "1";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
 });
+
 let two = document.querySelector("#two");
 two.addEventListener("click", (e) => {
 	if (display.textContent.length > 18) {
@@ -82,12 +90,19 @@ two.addEventListener("click", (e) => {
 			num1 = "2";
 			display.textContent = "2";
 		} else {
-			num1 += "2";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "2";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "2";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
 });
+
 let three = document.querySelector("#three");
 three.addEventListener("click", (e) => {
 	if (display.textContent.length > 18) {
@@ -105,12 +120,19 @@ three.addEventListener("click", (e) => {
 			num1 = "3";
 			display.textContent = "3";
 		} else {
-			num1 += "3";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "3";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "3";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
 });
+
 let four = document.querySelector("#four");
 four.addEventListener("click", (e) => {
 	if (display.textContent.length > 18) {
@@ -128,8 +150,14 @@ four.addEventListener("click", (e) => {
 			num1 = "4";
 			display.textContent = "4";
 		} else {
-			num1 += "4";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "4";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "4";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
@@ -151,8 +179,14 @@ five.addEventListener("click", (e) => {
 			num1 = "5";
 			display.textContent = "5";
 		} else {
-			num1 += "5";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "5";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "5";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
@@ -174,8 +208,14 @@ six.addEventListener("click", (e) => {
 			num1 = "6";
 			display.textContent = "6";
 		} else {
-			num1 += "6";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "6";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "6";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
@@ -197,8 +237,14 @@ seven.addEventListener("click", (e) => {
 			num1 = "7";
 			display.textContent = "7";
 		} else {
-			num1 += "7";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "7";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "7";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
@@ -220,8 +266,14 @@ eight.addEventListener("click", (e) => {
 			num1 = "8";
 			display.textContent = "8";
 		} else {
-			num1 += "8";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "8";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "8";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
@@ -243,8 +295,14 @@ nine.addEventListener("click", (e) => {
 			num1 = "9";
 			display.textContent = "9";
 		} else {
-			num1 += "9";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "9";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "9";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
@@ -266,8 +324,14 @@ zero.addEventListener("click", (e) => {
 			num1 = "0";
 			display.textContent = "0";
 		} else {
-			num1 += "0";
-			display.textContent = num1;
+			if (calculated === "yes") {
+				num1 = "0";
+				display.textContent = num1;
+				calculated = "no";
+			} else {
+				num1 += "0";
+				display.textContent = num1;
+			}
 		}
 	}
 	getData();
@@ -291,8 +355,14 @@ dot.addEventListener("click", (e) => {
 		num1 = "0.";
 		display.textContent = num1;
 	} else {
-		num1 += ".";
-		display.textContent = num1;
+		if (calculated === "yes") {
+			num1 = ".";
+			display.textContent = num1;
+			calculated = "no";
+		} else {
+			num1 += ".";
+			display.textContent = num1;
+		}
 	}
 	getData();
 });
@@ -350,3 +420,17 @@ divBy.addEventListener("click", (e) => {
 });
 
 let equals = document.querySelector("#equals");
+equals.addEventListener("click", (e) => {
+	if (num2 === "num2Empty") {
+		op = "opEmpty";
+		equals.removeEventListener("click", (e) => {
+			console.log("Nothing to calculate.");
+		});
+	} else {
+		num1 = display.textContent = total(num1, op, num2);
+		num2 = "num2Empty";
+		calculated = "yes";
+		op = "opEmpty";
+	}
+	getData();
+});

@@ -107,3 +107,17 @@ header {
 #nums h1:active {
 	background-color: #666;
 }
+#funcs h1:hover {
+	cursor: pointer;
+	background-color: #999;
+}
+#funcs h1:active {
+	background-color: #666;
+}
+#funcs h3:hover {
+	cursor: pointer;
+	background-color: #999;
+}
+#funcs h3:active {
+	background-color: #666;
+}
