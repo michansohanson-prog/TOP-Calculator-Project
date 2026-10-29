@@ -165,6 +165,19 @@ zero.addEventListener("click", (e) => {
 });
 
 let dot = document.querySelector("#dot");
+dot.addEventListener("click", (e) => {
+	if (display.textContent.length > 18) {
+		console.log("TOO LONG");
+	} else {
+		if (display.textContent.includes(".")) {
+			console.log("ALREADY HAVE A DOT");
+		} else {
+			showDisplay = display.textContent += ".";
+		}
+	}
+	num1 = display.textContent;
+	getData();
+});
 
 let clear = document.querySelector("#clear");
 clear.addEventListener("click", (e) => {
