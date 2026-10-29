@@ -1,8 +1,13 @@
-let num1;
-let num2;
-let op;
+let num1 = 0;
+let num2 = 0;
+let op = 0;
+let total;
 
-let data = [num1, op, num2];
+// let data = [num1, op, num2];
+
+function getData() {
+	console.log([num1, op, num2]);
+}
 
 let calc;
 
@@ -30,6 +35,8 @@ clear.addEventListener("mouseleave", (e) => {
 });
 clear.addEventListener("click", (e) => {
 	display.textContent = "0";
+	num1 = 0;
+	getData();
 });
 
 let back = document.querySelector("#back");
