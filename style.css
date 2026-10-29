@@ -100,6 +100,10 @@ header {
 	border-radius: 8px;
 }
 
-#clear:hover {
+#nums h1:hover {
 	cursor: pointer;
+	background-color: #999;
+}
+#nums h1:active {
+	background-color: #666;
 }
