@@ -1,6 +1,19 @@
+/*=======
+Need to update state logic:
+when a number is finalized into num1 with an operator, the new display needs to take the next numbers and update the display to = num2.
+
+So, you need to register the variable first, then update the display, not the other way around.
+
+Use "total" alongside the data array, or add it to the array. 
+
+SO - refacor each button to update display based on the var.  each click needs to add to the num1 string, etc.
+
+Probably a good idea to think about consolidating even listeners?
+ ==========*/
+
 let num1 = 0;
-let num2 = 0;
-let op = 0;
+let num2 = "num2Clear";
+let op = "opClear";
 let total;
 let showDisplay;
 
@@ -12,7 +25,26 @@ function getData() {
 	]);
 }
 
-let calc;
+function calc(n1, op, n2) {
+	let numA = Number(n1);
+	let numB = Number(n2);
+
+	switch (op) {
+		case "+":
+			return numA + numB;
+		case "-":
+			return numA - numB;
+		case "*":
+			return numA * numB;
+		case "/":
+			if (numB === 0) {
+				return "Inconceivable!";
+			}
+			return numA / numB;
+		default:
+			return numB;
+	}
+}
 
 let one = document.querySelector("#one");
 one.addEventListener("click", (e) => {
