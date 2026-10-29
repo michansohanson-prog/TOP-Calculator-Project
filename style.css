@@ -30,7 +30,7 @@ header {
 	box-shadow: 8px 8px 4px black;
 }
 
-#display {
+#screen {
 	border: 1px solid black;
 	width: 100%;
 	text-align: right;
@@ -98,4 +98,8 @@ header {
 	width: 100%;
 	box-shadow: 4px 4px 2px black;
 	border-radius: 8px;
+}
+
+#clear:hover {
+	cursor: pointer;
 }
