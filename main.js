@@ -22,11 +22,11 @@ function getData() {
 	console.log([`${num1}, ${op}, ${num2},`]);
 }
 
-const total = function calc(n1, op, n2) {
+const total = function calc(n1, ops, n2) {
 	let numA = Number(n1);
 	let numB = Number(n2);
 
-	switch (op) {
+	switch (ops) {
 		case "+":
 			return String(numA + numB);
 		case "-":
@@ -35,6 +35,9 @@ const total = function calc(n1, op, n2) {
 			return String(numA * numB);
 		case "/":
 			if (numB === 0) {
+				op = "opEmpty";
+				num2 = "num2Empty";
+				num1 = "0";
 				return "Inconceivable!";
 			}
 			return String(numA / numB);
@@ -378,6 +381,29 @@ clear.addEventListener("click", (e) => {
 });
 
 let back = document.querySelector("#back");
+back.addEventListener("click", (e) => {
+	if (calculated === "yes") {
+		return;
+	}
+	if (op !== "opEmpty" && num2 !== "num2Empty") {
+		num2 = num2.slice(0, -1);
+		if (num2 === "") {
+			num2 = "num2Empty";
+			display.textContent = num1;
+		} else {
+			display.textContent = num2;
+		}
+	} else if (op === "opEmpty") {
+		num1 = num1.slice(0, -1);
+		if (num1 === "") {
+			num1 = "0";
+		}
+		display.textContent = num1;
+	} else {
+		console.log("Cannot backspace an active operator state.");
+	}
+	getData();
+});
 
 let plus = document.querySelector("#plus");
 plus.addEventListener("click", (e) => {
