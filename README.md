@@ -2,13 +2,17 @@
 
 TOP Foundations final project: Calculator
 
-## Almost done
+## Features:
 
-I just realized I didn't add keyboard functionality.
+- keyboard functionality
+- chain operations / running totals
+  long decimals.
+- **Edge case:** I can't figure out why it's crashing when the number gets very large...something's not right in my cleanResult function.
+
+I might keep working on this when I revisit.
 
 ### ToDo:
 
-- keyboard functionality
 - add color and other styling
 - maybe another mini screen showing the active operator currently being used and/or display the num1 and num2 values.
 
