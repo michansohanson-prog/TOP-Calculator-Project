@@ -2,6 +2,16 @@
 
 TOP Foundations final project: Calculator
 
+## Almost done
+
+I just realized I didn't add keyboard functionality.
+
+### ToDo:
+
+- keyboard functionality
+- add color and other styling
+- maybe another mini screen showing the active operator currently being used and/or display the num1 and num2 values.
+
 ## Must contain:
 
 - add
